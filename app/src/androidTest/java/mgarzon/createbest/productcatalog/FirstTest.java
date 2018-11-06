@@ -48,8 +48,7 @@ import static org.hamcrest.CoreMatchers.anything;
             onView(withId(R.id.addButton)).perform(click());
 
             // Check that the text was changed.
-            //onView(withId(R.id.listViewProducts))
-              //      .check(matches(withText(mStringToBetyped)));
+            onView(withId(R.id.listViewProducts)).check(matches(withText(mStringToBetyped)));
             onData(anything()).inAdapterView(withId(R.id.listViewProducts)).atPosition(0).onChildView(withId(R.id.textViewName)).check(matches(withText("Hello")));
 
         }
